@@ -1,0 +1,9 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><title>Nicolò Lagravinese</title>
+<script>
+// Old site URLs (/project/:id, /about...) redirect to the matching #view
+(function () {
+  var m = location.pathname.match(/^(.*?\/)(?:project\/([a-z0-9-]+)|(work|about|contact))(?:\/.*)?$/);
+  location.replace(m ? m[1] + '#' + (m[2] || m[3]) : '/');
+})();
+</script></head><body></body></html>
